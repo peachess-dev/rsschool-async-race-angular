@@ -1,14 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
-
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    
-  ]
+  imports: [CommonModule],
+  exports: [ButtonModule],
 })
-export class PrimengModule { }
+export class PrimengModule {}

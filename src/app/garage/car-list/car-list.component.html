@@ -1,1 +1,19 @@
-<p>car-list works!</p>
+<div class="car-container flex flex-column gap-5">
+  <div *ngFor="let car of cars">
+    <div class="car flex flex-column gap-3">
+      <div class="flex gap-3">
+        {{ car.name }}
+        <i class="pi pi-play"></i>
+        <i class="pi pi-pause"></i>
+        <i class="pi pi-stop-circle"></i>
+      </div>
+      <div class="flex">
+        <img
+          src="../../../assets/images/race-car.svg"
+          alt="race-car"
+          style="width: 5opx; height: 50px; fill: red"
+        />
+      </div>
+    </div>
+  </div>
+</div>
