@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { PrimengModule } from './primeng.module';
+import { AppModule } from './app.module';
+import { PrimengModule } from './shared/primeng.module';
 import { RouterOutlet } from '@angular/router';
 
+import { Component } from '@angular/core';
 import { GarageComponent } from './garage/garage.component';
 import { WinnersComponent } from './winners/winners.component';
 
@@ -10,7 +10,7 @@ import { WinnersComponent } from './winners/winners.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
+    AppModule,
     PrimengModule,
     RouterOutlet,
     GarageComponent,

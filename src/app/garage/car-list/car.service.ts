@@ -9,8 +9,13 @@ export class CarService {
   private baseUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) {}
+
   getCars(): Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/garage`);
+  }
+
+  addCar(car: any) {
+    return this.http.post(`${this.baseUrl}/garage}`, car);
   }
 }
 

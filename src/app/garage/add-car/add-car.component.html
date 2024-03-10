@@ -1,0 +1,61 @@
+<section class="container">
+  <form action="#" class="form" #addCar="ngForm" (ngSubmit)="onAddCar(addCar)">
+    <div class="car-name field">
+      <label for="car-name">Car name*</label>
+      <input
+        id="car-name"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        name="car-name"
+        ngModel
+        required
+      />
+    </div>
+    <div class="car-model field">
+      <label for="car-model">Car model*</label>
+      <input
+        id="car-model"
+        type="text"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        name="car-model"
+        ngModel
+        required
+      />
+    </div>
+    <div class="car-color field">
+      <label for="car-color">Car color*</label>
+      <input
+        id="car-color"
+        type="color"
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        name="car-color"
+        ngModel
+        required
+      />
+    </div>
+    <div class="car-img field">
+      <label for="car-img">Car image*</label>
+      <select
+        id="car-img"
+        class="w-full text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round outline-none focus:border-primary"
+        style="appearance: auto"
+        name="car-img"
+        ngModel
+      >
+        <option hidden>Image 1</option>
+        <option value="img2">Image 2</option>
+        <option value="img3">Image 3</option>
+        <option value="img4">Image 4</option>
+        <option value="img5">Image 5</option>
+      </select>
+    </div>
+    <div class="car-add-btn flex justify-content-center mx-auto my-5">
+      <p-button
+        type="submit"
+        label="Add a car"
+        [text]="true"
+        [raised]="true"
+      ></p-button>
+    </div>
+  </form>
+</section>
