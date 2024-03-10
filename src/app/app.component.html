@@ -1,3 +1,37 @@
-<app-garage></app-garage>
+<div class="container flex flex-column">
+  <nav class="flex gap-5 ml-auto">
+    <a href="#"> Change theme</a>
+    <a routerLink="/about">About</a>
+  </nav>
+  <div class="flex justify-content-center">
+    <header class="header col-6">
+      <div class="flex flex-column align-items-center gap-5">
+        <div class="header-btn flex justify-content-center gap-5">
+          <p-button
+            label="Garage"
+            [text]="true"
+            [raised]="true"
+            (onClick)="redirectToGarage()"
+          ></p-button>
 
-<router-outlet></router-outlet>
+          <p-button
+            label="Race"
+            [text]="true"
+            [raised]="true"
+            (onClick)="redirectToRace()"
+          ></p-button>
+
+          <p-button
+            label="Winners"
+            [text]="true"
+            [raised]="true"
+            (onClick)="redirectToWinners()"
+          ></p-button>
+        </div>
+        <p class="m-0">There are 4 cars in your garage</p>
+        <p class="m-0">You are in the box № 1</p>
+      </div>
+    </header>
+  </div>
+  <router-outlet></router-outlet>
+</div>

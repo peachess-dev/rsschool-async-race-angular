@@ -5,14 +5,14 @@ import { Car } from '../../garage/car-list/car.model';
 import { CarService } from '../../garage/car-list/car.service';
 
 @Component({
-  selector: 'app-car-list',
+  selector: 'app-car-race-list',
   standalone: true,
   imports: [CommonModule, HttpClientModule],
   providers: [CarService],
   templateUrl: './car-race-list.component.html',
   styleUrl: './car-race-list.component.scss',
 })
-export class CarListComponent implements OnInit {
+export class CarRaceListComponent implements OnInit {
   cars: Car[] = [];
 
   constructor(private carService: CarService) {}

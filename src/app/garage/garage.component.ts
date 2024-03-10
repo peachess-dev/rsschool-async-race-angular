@@ -4,9 +4,11 @@ import { PrimengModule } from '../shared/primeng.module';
 import { CarListComponent } from './car-list/car-list.component';
 import { AddCarComponent } from './add-car/add-car.component';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { CarService } from './car-list/car.service';
 import { AddCarService } from './add-car/add-car.service';
 import { Car } from './car-list/car.model';
-import { CarService } from './car-list/car.service';
+
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-garage',
@@ -22,6 +24,7 @@ export class GarageComponent {
   constructor(
     public dialogService: DialogService,
     private carService: CarService,
+    private router: Router,
   ) {}
 
   openAddCar(): void {
@@ -49,5 +52,11 @@ export class GarageComponent {
     //   if (!result) return; //modal is cancelled will return false
     //   console.log('modal closed', result);
     // });
+
+    // Redirect to Race component
+  }
+
+  redirectToRace() {
+    this.router.navigate(['/race']);
   }
 }
